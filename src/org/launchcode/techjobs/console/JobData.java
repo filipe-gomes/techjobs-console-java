@@ -95,7 +95,7 @@ public class JobData {
         for (HashMap<String, String> job : someJobs) {
             boolean duplicate = false;
             for(String searchItem : job.keySet()) {
-                if ((job.get(searchItem).toLowerCase()).contains(searchTerm.toLowerCase()) && duplicate == false) {
+                if ((job.get(searchItem).toLowerCase()).contains(searchTerm.toLowerCase()) && !duplicate) {
                     jobs.add(job);
                     duplicate = true;
                 }
